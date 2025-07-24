@@ -1293,7 +1293,7 @@ def scan_qr():
                             elapsed_time = current_time - last_scanned_time[unique_id]
                             if elapsed_time < 18:  # 18 seconds cooldown
                                 # Display cooldown warning message in side panel
-                                display_message = f"Kam kar {unique_id}"
+                                display_message = f"{unique_id} Is on a cooldown{elapsed_time}"
                                 message_start_time = current_time
                                 # Only show ID in main terminal
                                 print(f"{unique_id}")
@@ -1308,9 +1308,9 @@ def scan_qr():
                             
                             # Set custom messages for side panel display
                             if is_first_scan:
-                                display_message = f"Ha {unique_id} lagai teri Attendence kam pe lag chal"
+                                display_message = f"Your {unique_id} Attendence has been marked for the day"
                             else:
-                                display_message = f"Chal nikal pehli fursat mai nikal {unique_id}"
+                                display_message = f"Check out for {unique_id} has been added"
                             
                             message_start_time = current_time
                             
